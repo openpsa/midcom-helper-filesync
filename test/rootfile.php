@@ -23,17 +23,11 @@ if (!midcom_connection::setup(dirname(__DIR__) . DIRECTORY_SEPARATOR)) {
     * db setup, but this requires further changes in dependent repos
     */
     define('OPENPSA_DB_CREATED', true);
-    require_once dirname(__DIR__) . '/vendor/openpsa/midcom/tools/bootstrap.php';
     $GLOBALS['midcom_config_local']['log_level'] = 5;
     $GLOBALS['midcom_config_local']['log_filename'] = dirname(midgard_connection::get_instance()->config->logfilename) . '/midcom.log';
-    $GLOBALS['midcom_config_local']['midcom_root_topic_guid'] = openpsa_prepare_topics();
+    $GLOBALS['midcom_config_local']['midcom_root_component'] = 'net.nehmer.static';
     $GLOBALS['midcom_config_local']['auth_backend_simple_cookie_secure'] = false;
     $GLOBALS['midcom_config_local']['toolbars_enable_centralized'] = false;
-}
-
-// Path to the MidCOM environment
-if (!defined('MIDCOM_ROOT')) {
-    define('MIDCOM_ROOT', realpath(OPENPSA_TEST_ROOT . '/../lib'));
 }
 
 //Get required helpers
