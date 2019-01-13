@@ -1,0 +1,1 @@
+'filesync_path'  => '/var/spool/midgard/filesync',

@@ -1,0 +1,16 @@
+/.project
+/.buildpath
+/.settings
+/config.inc.php
+/test/config.inc.php
+/test/__output
+/vendor/*/
+/vendor/autoload.php
+composer.lock
+phpunit.xml
+.DS_Store
+.directory
+*.*~
+/var
+/vendor
+/web/midcom-static
